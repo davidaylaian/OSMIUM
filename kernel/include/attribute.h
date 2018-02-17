@@ -9,8 +9,9 @@
 #ifndef _ATTRIBUTE_H
 #define _ATTRIBUTE_H
 
+#define noreturn	_Noreturn
+
 #define noinline	__attribute__((noinline))
-#define noreturn	__attribute__((noreturn))
 #define packed		__attribute__((packed))
 #define pure		__attribute__((pure))
 
