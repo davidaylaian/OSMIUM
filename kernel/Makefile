@@ -1,7 +1,7 @@
 CC := i686-elf-gcc
 AS := nasm
 
-CWARNINGS := -Wall -Wextra -pedantic -Wshadow -Wcast-align -Wwrite-strings -Wredundant-decls -Winline
+CWARNINGS := -Wall -Wextra -Wshadow -Wcast-align -Wwrite-strings -Wredundant-decls -Winline
 CFLAGS := -std=gnu11 -ffreestanding -O3 -I include -nostdlib -nostdinc -fno-builtin -masm=intel -lgcc $(CWARNINGS)
 ASFLAGS := -w+orphan-labels
 
