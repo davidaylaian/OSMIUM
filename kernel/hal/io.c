@@ -6,7 +6,7 @@
  *
  */
 
-#include <carbon/io.h>
+#include <stdint.h>
 
 // enable interrupts
 void enable()

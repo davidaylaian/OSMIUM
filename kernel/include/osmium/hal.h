@@ -6,9 +6,4 @@
  *
  */
 
-#include <osmium/hal.h>
-
-void kernel_main()
-{
-	hal_initialize();
-}
+void hal_initialize();

@@ -6,9 +6,11 @@
  *
  */
 
-#include <osmium/hal.h>
+extern void gdt_load();
+extern void idt_install();
 
-void kernel_main()
+void i386_cpu_initialize()
 {
-	hal_initialize();
+	gdt_load();
+	//idt_install();
 }

@@ -6,9 +6,9 @@
  *
  */
 
-#include <osmium/hal.h>
+extern void i386_cpu_initialize();
 
-void kernel_main()
+void hal_initialize()
 {
-	hal_initialize();
+	i386_cpu_initialize();
 }
