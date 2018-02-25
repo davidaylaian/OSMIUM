@@ -6,7 +6,8 @@
  *
  */
 
-#include <string.h>
+#include <stddef.h>
+#include <stdint.h>
 
 pure size_t strlen(const char* str)
 {
@@ -64,7 +65,7 @@ void* memset(void* dest, int src, size_t len)
 {
 	uint_fast8_t* dp = dest;
 
-	while (len--)
+	for (int n = 0; n < len; n++)
 	{
 		*dp++ = src;
 	}
@@ -77,7 +78,7 @@ void* memcpy(void* dest, const void* src, size_t len)
 	uint_fast8_t* dp = dest;
 	const uint_fast8_t* sp = src;
 
-	while (len--)
+	for (int n = 0; n < len; n++)
 	{
 		*dp++ = *sp++;
 	}
@@ -115,9 +116,9 @@ char* itoa(int n, char* str, int base)
 	// string to int conversion
 	while (n)
 	{
-		int32_t rem = n % base;
+		int rem = n % base;
 		str[i++] = (rem > 9) ? (rem - 10) + 'a' : rem + '0';
-		n = n / base;
+		n /= base;
 	}
 
 	if (negative)
